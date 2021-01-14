@@ -17,4 +17,5 @@ steps:
           gcloud builds submit ${d: : -1} --config ${config} \
           --substitutions _CLOUDFUNCTION_NAME=${d: : -1}
         ) &
+        echo "done submitting ${d}"
         done
