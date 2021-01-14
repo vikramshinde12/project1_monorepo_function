@@ -19,3 +19,6 @@ steps:
         ) &
         echo "done submitting ${d}"
         done
+options:
+  substitution_option: 'ALLOW_LOOSE'
+  dynamic_substitutions: true
