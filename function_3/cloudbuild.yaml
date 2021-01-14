@@ -1,0 +1,12 @@
+steps:
+- name: 'gcr.io/cloud-builders/gcloud'
+  args:
+  - functions
+  - deploy
+  - "${_CLOUDFUNCTION_NAME}"
+  - --source=.
+  - --trigger-http
+  - --region=us-central1
+  - --runtime=python37
+substitutions:
+  _CLOUDFUNCTION_NAME: ${_CLOUDFUNCTION_NAME}
